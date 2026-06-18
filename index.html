@@ -13,7 +13,7 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: "DM Sans", sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+  body { background: var(--bg); color: var(--text); font-family: "DM Sans", sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; max-width: 100vw; }
 
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 3rem; border-bottom: 1px solid var(--border); background: rgba(7,14,18,0.94); backdrop-filter: blur(12px); }
   .nav-logo { font-family: "DM Mono", monospace; font-size: 0.75rem; color: var(--amber); letter-spacing: 0.15em; text-transform: uppercase; }
@@ -149,14 +149,22 @@
     .hero { grid-template-columns: 1fr; padding-top: 4rem; }
     .hero-left { padding: 2.5rem 1.5rem 2rem; margin: 0 auto; max-width: 100%; }
     .hero-right { display: none; }
-    section { padding: 5rem 1.5rem; }
+    section { padding: 4rem 0.5rem; }
+    .section-header { padding: 0 0.75rem; }
+    .about-text { padding: 0 0.75rem; }
+    .contact-heading { padding: 0 0.75rem; }
+    .interests-section { padding: 0 0.5rem 4rem 0.5rem; }
     .exp-item { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
+    .project-card { padding: 1.25rem; }
+    .exp-item { padding: 1.25rem; }
+    .project-image-placeholder { height: 180px; border: none; padding: 0; }
+    .project-image-placeholder img { width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 6px; }
     .skills-grid { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
     .about-photo-wrap { display: none; }
     .interests-flat-grid { grid-template-columns: repeat(2, auto); gap: 1.25rem 3rem; justify-content: center; }
-    .contact-section { grid-template-columns: 1fr; padding: 5rem 1.5rem; }
+    .contact-section { grid-template-columns: 1fr; padding: 4rem 0.5rem; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
   }
 </style>
